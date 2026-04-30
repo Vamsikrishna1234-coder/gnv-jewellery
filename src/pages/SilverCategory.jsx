@@ -3,7 +3,7 @@
 import React from "react";
 import { useParams } from "react-router-dom";
 import silverProducts from "../data/silverProducts";
-import ProductCard from "../components/Cards/ProductCard";
+import ProductCard from "../components/Cards/Productcard";
 
 const SilverCategory = () => {
   const { category } = useParams();

@@ -1,7 +1,7 @@
 import React from "react";
 import { useParams } from "react-router-dom";
 import diamondProducts from "../data/diamondProducts";
-import ProductCard from "../components/Cards/ProductCard";
+import ProductCard from "../components/Cards/Productcard";
 
 const DiamondCategory = () => {
   const { category } = useParams();

@@ -2,7 +2,7 @@
 
 import React from "react";
 import silverCategories from "../data/silverCategories";
-import CategoryCard from "../components/Cards/CategoryCard";
+import CategoryCard from "../components/Cards/Categorycard";
 
 const Silver = () => {
   return (

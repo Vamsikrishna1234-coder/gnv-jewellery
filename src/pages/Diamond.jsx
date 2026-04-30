@@ -1,6 +1,6 @@
 import React from "react";
 import diamondCategories from "../data/diamondCategories";
-import CategoryCard from "../components/Cards/CategoryCard";
+import CategoryCard from "../components/Cards/Categorycard";
 
 const Diamond = () => {
   return (

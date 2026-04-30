@@ -1,6 +1,6 @@
 import React from "react";
 import coinCategories from "../data/coinCategories";
-import CategoryCard from "../components/Cards/CategoryCard";
+import CategoryCard from "../components/Cards/Categorycard";
 
 const Coins = () => {
   return (

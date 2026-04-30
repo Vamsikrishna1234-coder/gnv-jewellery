@@ -3,7 +3,7 @@
 import React from "react";
 import { useParams } from "react-router-dom";
 import goldProducts from "../data/goldProducts";
-import ProductCard from "../components/Cards/ProductCard";
+import ProductCard from "../components/Cards/Productcard";
 
 const GoldCategory = () => {
   const { category } = useParams();
