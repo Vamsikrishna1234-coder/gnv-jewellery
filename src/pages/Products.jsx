@@ -1,7 +1,7 @@
 // src/pages/Products.jsx
 
 import React, { useState } from "react";
-import ProductCard from "../components/Cards/Productcard";
+import ProductCard from "../components/Cards/ProductCard";
 
 /* Product Data */
 import goldProducts from "../data/goldProducts";

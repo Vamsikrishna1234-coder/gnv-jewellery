@@ -1,6 +1,6 @@
 import React from "react";
 import bridalCategories from "../data/bridalCategories";
-import CategoryCard from "../components/Cards/Categorycard";
+import CategoryCard from "../components/Cards/CategoryCard";
 
 const Bridal = () => {
   return (

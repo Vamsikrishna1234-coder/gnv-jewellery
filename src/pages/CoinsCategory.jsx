@@ -1,7 +1,7 @@
 import React from "react";
 import { useParams } from "react-router-dom";
 import coinProducts from "../data/coinsProducts";
-import ProductCard from "../components/Cards/Productcard";
+import ProductCard from "../components/Cards/ProductCard";
 
 const CoinsCategory = () => {
   const { category } = useParams();

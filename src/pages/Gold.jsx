@@ -2,7 +2,7 @@
 
 import React from "react";
 import goldCategories from "../data/goldCategories";
-import CategoryCard from "../components/Cards/Categorycard";
+import CategoryCard from "../components/Cards/CategoryCard";
 
 const Gold = () => {
   return (
