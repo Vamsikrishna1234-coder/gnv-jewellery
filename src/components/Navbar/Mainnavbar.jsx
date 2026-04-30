@@ -86,8 +86,8 @@ import {
 import logo from "../../assets/images/GNV Logo.png";
 import { Link } from "react-router-dom";
 /* Reusable Search Components */
-import SearchBar from "../Common/SearchBar";
-import SearchPopup from "../Common/SearchPopup";
+import SearchBar from "../Common/Searchbar";
+import SearchPopup from "../Common/Searchpopup";
 
 /* Data + Hook */
 import products from "../../data/products";
