@@ -13,6 +13,10 @@ import Navbar from "./components/Navbar/Navbar";
 /* Main Pages */
 import Home from "./pages/Home";
 import Products from "./pages/Products";
+import Locatestore from "./pages/Locatestore";
+import Schemes from "./pages/Schemes";
+import NeedHelp from "./pages/Needhelp";
+import Cart from "./pages/Cart";
 import Gold from "./pages/Gold";
 import GoldCategory from "./pages/GoldCategory";
 import Silver from "./pages/Silver";
@@ -23,18 +27,28 @@ import Coins from "./pages/Coins";
 import CoinsCategory from "./pages/CoinsCategory";
 import Bridal from "./pages/Bridal";
 import BridalCategory from "./pages/BridalCategory";
+import Chatbot from "../src/components/Chatbot"
 import About from "./pages/About";
 import Contact from "./pages/Support";
+import Footer from "./components/Footer";
 
 /* Product Details */
 import ProductDetails from "./pages/ProductDetails";
+
+/* Scroll to Top */
+import ScrollToTop from "./components/ScrollToTop";
 
 function App() {
   return (
     <Router>
 
+      {/* Scroll to Top on Route Change */}
+      <ScrollToTop />
+
       {/* Common Header */}
       <Navbar />
+
+      <Chatbot/>
 
       {/* Website Routes */}
       <Routes>
@@ -86,11 +100,18 @@ function App() {
           element={<ProductDetails />}
         />
 
+        <Route path="/locate-store" element={<Locatestore />} />
+        <Route path="/schemes" element={<Schemes />} />
+        <Route path="/need-help" element={<NeedHelp />} />
+
+        <Route path="/cart" element={<Cart />} />
         {/* Static Pages */}
         <Route path="/about" element={<About />} />
         <Route path="/contact" element={<Contact />} />
 
       </Routes>
+
+      <Footer />
 
     </Router>
   );

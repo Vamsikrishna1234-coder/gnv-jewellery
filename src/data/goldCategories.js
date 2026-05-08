@@ -1,10 +1,10 @@
 // src/data/goldCategories.js
 
-import necklaceImg from "../assets/images/gnv img.png";
-import chainImg from "../assets/images/gnv img.png";
-import ringImg from "../assets/images/gnv img.png";
-import haramImg from "../assets/images/gnv img.png";
-import banglesImg from "../assets/images/gnv img.png";
+import necklaceImg from "../assets/images/jewel image.jpg";
+import chainImg from "../assets/images/jewel image.jpg";
+import ringImg from "../assets/images/jewel image.jpg";
+import haramImg from "../assets/images/jewel image.jpg";
+import banglesImg from "../assets/images/jewel image.jpg";
 import jhumkaImg from "../assets/images/gnv img.png";
 import mangalsutraImg from "../assets/images/gnv img.png";
 import nosepinImg from "../assets/images/gnv img.png";

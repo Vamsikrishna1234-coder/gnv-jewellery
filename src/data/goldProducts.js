@@ -1,189 +1,408 @@
-// src/data/goldProducts.js
 
-import img1 from "../assets/images/gnv img.png";
+import img1 from "../assets/images/jewel image.jpg";
 
 const goldProducts = [
+
+  /* ================= NECKLACES ================= */
   {
-    id: 101,
+    id: "gold-101",
     category: "necklace",
     name: "Royal Gold Necklace",
-    image: img1,
-    purity: "22KT Hallmarked",
-    weight: "32.5 g",
-    makingCharges: "12%",
+    weight: "32.5",
+    metal: "Gold",
     price: 245000,
-    description:
-      "Elegant bridal necklace crafted with premium finish and timeless detailing.",
+    image: img1,
+    purity: "22KT",
+    makingCharges: "12%",
+    description: "Bridal necklace with premium detailing.",
+    images: [img1, img1, img1]
   },
-
   {
-    id: 102,
+    id: "gold-102",
     category: "necklace",
     name: "Classic Layer Necklace",
-    image: img1,
-    purity: "22KT Hallmarked",
-    weight: "28.0 g",
-    makingCharges: "11%",
+    metal: "Gold",
+    weight: "28",
     price: 212000,
-    description:
-      "Graceful layered necklace ideal for festive and traditional occasions.",
-  },
-
-  {
-    id: 103,
-    category: "ring",
-    name: "Designer Gold Ring",
     image: img1,
-    purity: "22KT Hallmarked",
-    weight: "5.2 g",
-    makingCharges: "10%",
-    price: 39800,
-    description:
-      "Modern ring with sleek styling crafted for daily elegance.",
-  },
-
-  {
-    id: 104,
-    category: "ring",
-    name: "Floral Gold Ring",
-    image: img1,
-    purity: "22KT Hallmarked",
-    weight: "4.6 g",
-    makingCharges: "10%",
-    price: 35200,
-    description:
-      "Floral inspired ring featuring soft curves and rich shine.",
-  },
-
-  {
-    id: 105,
-    category: "bangles",
-    name: "Traditional Gold Bangles",
-    image: img1,
-    purity: "22KT Hallmarked",
-    weight: "38.0 g",
-    makingCharges: "13%",
-    price: 286000,
-    description:
-      "Traditional bangles designed with intricate patterns and premium polish.",
-  },
-
-  {
-    id: 106,
-    category: "bangles",
-    name: "Lightweight Gold Bangles",
-    image: img1,
-    purity: "22KT Hallmarked",
-    weight: "18.5 g",
+    purity: "22KT",
     makingCharges: "11%",
-    price: 138000,
-    description:
-      "Lightweight daily wear bangles with elegant craftsmanship.",
+    description: "Layered festive necklace.",
+    images: [img1, img1, img1]
   },
-
   {
-    id: 107,
-    category: "chain",
-    name: "Classic Gold Chain",
+    id: "gold-103",
+    category: "necklace",
+    name: "Temple Necklace",
+    metal: "Gold",
+    weight: "40",
+    price: 310000,
     image: img1,
-    purity: "22KT Hallmarked",
-    weight: "16.0 g",
-    makingCharges: "9%",
-    price: 119000,
-    description:
-      "Stylish chain perfect for everyday use and gifting.",
+    purity: "22KT",
+    makingCharges: "14%",
+    description: "Temple style heavy necklace.",
+    images: [img1, img1, img1]
   },
-
   {
-    id: 108,
-    category: "fancy-chain",
-    name: "Fancy Designer Chain",
+    id: "gold-104",
+    category: "necklace",
+    name: "Short Gold Necklace",
+    metal: "Gold",
+    weight: "20",
+    price: 150000,
     image: img1,
-    purity: "22KT Hallmarked",
-    weight: "21.4 g",
+    purity: "22KT",
+    makingCharges: "10%",
+    description: "Short elegant necklace.",
+    images: [img1, img1, img1]
+  },
+  {
+    id: "gold-105",
+    category: "necklace",
+    name: "Designer Necklace",
+    metal: "Gold",
+    weight: "26",
+    price: 198000,
+    image: img1,
+    purity: "22KT",
     makingCharges: "12%",
-    price: 161000,
-    description:
-      "Designer fancy chain with premium links and modern styling.",
+    description: "Modern designer necklace.",
+    images: [img1, img1, img1]
   },
-
   {
-    id: 109,
-    category: "haram",
-    name: "Temple Gold Haram",
+    id: "gold-106",
+    category: "necklace",
+    name: "Bridal Gold Set Necklace",
+    metal: "Gold",
+    weight: "50",
+    price: 385000,
     image: img1,
-    purity: "22KT Hallmarked",
-    weight: "56.5 g",
+    purity: "22KT",
     makingCharges: "15%",
-    price: 425000,
-    description:
-      "Temple-style haram crafted for weddings and grand celebrations.",
+    description: "Heavy bridal necklace.",
+    images: [img1, img1, img1]
   },
 
+  /* ================= RINGS ================= */
   {
-    id: 110,
-    category: "jhumkas",
-    name: "Classic Gold Jhumkas",
+    id: "gold-201",
+    category: "rings",
+    name: "Designer Ring",
+    metal: "Gold",
+    weight: "5",
+    price: 39000,
     image: img1,
-    purity: "22KT Hallmarked",
-    weight: "12.2 g",
-    makingCharges: "12%",
-    price: 91500,
-    description:
-      "Traditional jhumkas with rich detailing and festive appeal.",
+    purity: "22KT",
+    makingCharges: "10%",
+    description: "Stylish modern ring.",
+    images: [img1, img1, img1]
   },
-
   {
-    id: 111,
-    category: "mangalsutra",
-    name: "Elegant Mangalsutra",
+    id: "gold-202",
+    category: "rings",
+    name: "Floral Ring",
+    metal: "Gold",
+    weight: "4",
+    price: 32000,
     image: img1,
-    purity: "22KT Hallmarked",
-    weight: "24.0 g",
+    purity: "22KT",
+    makingCharges: "10%",
+    description: "Floral gold ring.",
+    images: [img1, img1, img1]
+  },
+  {
+    id: "gold-203",
+    category: "rings",
+    name: "Classic Band Ring",
+    metal: "Gold",
+    weight: "6",
+    price: 45000,
+    image: img1,
+    purity: "22KT",
+    makingCharges: "9%",
+    description: "Simple band ring.",
+    images: [img1, img1, img1]
+  },
+  {
+    id: "gold-204",
+    category: "rings",
+    name: "Engagement Ring",
+    metal: "Gold",
+    weight: "5.5",
+    price: 41000,
+    image: img1,
+    purity: "22KT",
+    makingCharges: "10%",
+    description: "Elegant engagement ring.",
+    images: [img1, img1, img1]
+  },
+  {
+    id: "gold-205",
+    category: "rings",
+    name: "Stone Ring",
+    metal: "Gold",
+    weight: "6.2",
+    price: 48000,
+    image: img1,
+    purity: "22KT",
     makingCharges: "11%",
-    price: 182000,
-    description:
-      "Elegant mangalsutra blending tradition with modern charm.",
+    description: "Ring with stone design.",
+    images: [img1, img1, img1]
   },
-
   {
-    id: 112,
-    category: "bracelets",
-    name: "Premium Gold Bracelet",
+    id: "gold-206",
+    category: "rings",
+    name: "Minimal Ring",
+    metal: "Gold",
+    weight: "3.5",
+    price: 28000,
     image: img1,
-    purity: "22KT Hallmarked",
-    weight: "14.8 g",
-    makingCharges: "10%",
-    price: 110000,
-    description:
-      "Luxury bracelet crafted with sleek finish and bold appeal.",
-  },
-
-  {
-    id: 113,
-    category: "nosepin",
-    name: "Gold Nosepin",
-    image: img1,
-    purity: "22KT Hallmarked",
-    weight: "1.8 g",
+    purity: "22KT",
     makingCharges: "8%",
-    price: 14200,
-    description:
-      "Minimal and elegant nosepin for modern traditional styling.",
+    description: "Minimal daily wear ring.",
+    images: [img1, img1, img1]
   },
 
+  /* ================= BANGLES ================= */
   {
-    id: 114,
-    category: "pendants",
-    name: "Designer Gold Pendant",
+    id: "gold-301",
+    category: "bangles",
+    name: "Traditional Bangles",
+    metal: "Gold",
+    weight: "38",
+    price: 120000,
     image: img1,
-    purity: "22KT Hallmarked",
-    weight: "6.5 g",
-    makingCharges: "10%",
-    price: 48500,
-    description:
-      "Beautiful pendant with premium finish and versatile design.",
+    purity: "22KT",
+    makingCharges: "13%",
+    description: "Traditional gold bangles.",
+    images: [img1, img1, img1]
   },
+  {
+    id: "gold-302",
+    category: "bangles",
+    name: "Lightweight Bangles",
+    metal: "Gold",
+    weight: "18",
+    price: 80000,
+    image: img1,
+    purity: "22KT",
+    makingCharges: "11%",
+    description: "Daily wear bangles.",
+    images: [img1, img1, img1]
+  },
+  {
+    id: "gold-303",
+    category: "bangles",
+    name: "Designer Bangles",
+    metal: "Gold",
+    weight: "25",
+    price: 90000,
+    image: img1,
+    purity: "22KT",
+    makingCharges: "12%",
+    description: "Designer bangles.",
+    images: [img1, img1, img1]
+  },
+  {
+    id: "gold-304",
+    category: "bangles",
+    name: "Bridal Bangles",
+    metal: "Gold",
+    weight: "45",
+    price: 70000,
+    image: img1,
+    purity: "22KT",
+    makingCharges: "15%",
+    description: "Heavy bridal bangles.",
+    images: [img1, img1, img1]
+  },
+  {
+    id: "gold-305",
+    category: "bangles",
+    name: "Thin Bangles",
+    metal: "Gold",
+    weight: "12",
+    price: 92000,
+    image: img1,
+    purity: "22KT",
+    makingCharges: "9%",
+    description: "Slim bangles.",
+    images: [img1, img1, img1]
+  },
+  {
+    id: "gold-306",
+    category: "bangles",
+    name: "Antique Bangles",
+    metal: "Gold",
+    weight: "30",
+    price: 120000,
+    image: img1,
+    purity: "22KT",
+    makingCharges: "13%",
+    description: "Antique finish bangles.",
+    images: [img1, img1, img1]
+  },
+
+  /* ================= CHAINS ================= */
+  {
+    id: "gold-401",
+    category: "chains",
+    name: "Classic Chain",
+    metal: "Gold",
+    weight: "16",
+    price: 119000,
+    image: img1,
+    purity: "22KT",
+    makingCharges: "9%",
+    description: "Classic gold chain.",
+    images: [img1, img1, img1]
+  },
+  {
+    id: "gold-402",
+    category: "chains",
+    name: "Box Chain",
+    metal: "Gold",
+    weight: "18",
+    price: 135000,
+    image: img1,
+    purity: "22KT",
+    makingCharges: "10%",
+    description: "Box design chain.",
+    images: [img1, img1, img1]
+  },
+  {
+    id: "gold-403",
+    category: "chains",
+    name: "Rope Chain",
+    metal: "Gold",
+    weight: "20",
+    price: 150000,
+    image: img1,
+    purity: "22KT",
+    makingCharges: "11%",
+    description: "Rope style chain.",
+    images: [img1, img1, img1]
+  },
+  {
+    id: "gold-404",
+    category: "chains",
+    name: "Flat Chain",
+    metal: "Gold",
+    weight: "14",
+    price: 105000,
+    image: img1,
+    purity: "22KT",
+    makingCharges: "9%",
+    description: "Flat design chain.",
+    images: [img1, img1, img1]
+  },
+  {
+    id: "gold-405",
+    category: "chains",
+    name: "Fancy Chain",  
+    metal: "Gold",
+    weight: "22",
+    price: 165000,
+    image: img1,
+    purity: "22KT",
+    makingCharges: "12%",
+    description: "Fancy stylish chain.",
+    images: [img1, img1, img1]
+  },
+  {
+    id: "gold-406",
+    category: "chains",
+    name: "Heavy Chain",
+    metal: "Gold",
+    weight: "30",
+    price: 225000,
+    image: img1,
+    purity: "22KT",
+    makingCharges: "13%",
+    description: "Heavy premium chain.",
+    images: [img1, img1, img1]
+  },
+
+  /* ================= BRACELETS ================= */
+  {
+    id: "gold-501",
+    category: "bracelets",
+    name: "Gold Bracelet",
+    metal: "Gold",
+    weight: "14",
+    price: 110000,
+    image: img1,
+    purity: "22KT",
+    makingCharges: "10%",
+    description: "Premium bracelet.",
+    images: [img1, img1, img1]
+  },
+  {
+    id: "gold-502",
+    category: "bracelets",
+    name: "Charm Bracelet",
+    metal: "Gold",
+    weight: "12",
+    price: 95000,
+    image: img1,
+    purity: "22KT",
+    makingCharges: "9%",
+    description: "Charm bracelet.",
+    images: [img1, img1, img1]
+  },
+  {
+    id: "gold-503",
+    category: "bracelets",
+    name: "Men Bracelet",
+    metal: "Gold",
+    weight: "18",
+    price: 140000,
+    image: img1,
+    purity: "22KT",
+    makingCharges: "11%",
+    description: "Bold men bracelet.",
+    images: [img1, img1, img1]
+  },
+  {
+    id: "gold-504",
+    category: "bracelets",
+    name: "Thin Bracelet",
+    metal: "Gold",
+    weight: "10",
+    price: 78000,
+    image: img1,
+    purity: "22KT",
+    makingCharges: "8%",
+    description: "Slim bracelet.",
+    images: [img1, img1, img1]
+  },
+  {
+    id: "gold-505",
+    category: "bracelets",
+    name: "Designer Bracelet",
+    metal: "Gold",
+    weight: "16",
+    price: 125000,
+    image: img1,
+    purity: "22KT",
+    makingCharges: "10%",
+    description: "Designer bracelet.",
+    images: [img1, img1, img1]
+  },
+  {
+    id: "gold-506",
+    category: "bracelets",
+    metal: "Gold",
+    name: "Antique Bracelet",
+    weight: "20",
+    price: 155000,
+    image: img1,
+    purity: "22KT",
+    makingCharges: "12%",
+    description: "Antique finish bracelet.",
+    images: [img1, img1, img1]
+  }
+
 ];
 
 export default goldProducts;

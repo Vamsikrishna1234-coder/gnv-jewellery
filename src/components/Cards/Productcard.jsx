@@ -1,69 +1,169 @@
-// src/components/Cards/ProductCard.jsx
+// // import React from "react";
+// // import { Link } from "react-router-dom";
+// // import { useCart } from "../../context/CartContext";
+
+// // const ProductCard = ({ item }) => {
+// //   const { addToCart } = useCart();
+
+// //   return (
+// //     <Link to={`/product/${item.id}`}>
+// //       <div className="text-center group cursor-pointer w-full">
+
+// //         <div className="border border-gray-300 rounded-2xl p-5 flex items-center justify-center">
+// //           <img
+// //             src={item.image}
+// //             className="h-[380px] object-cover rounded-xl transition-transform duration-300 group-hover:scale-105 rounded-2xl"
+// //             alt={item.name}
+// //           />
+// //         </div>
+
+// //         <h3 className="mt-4 text-xl text-[#2c1f14]">
+// //           {item.name}
+// //         </h3>
+
+// //       </div>
+// //     </Link>
+// //   );
+// // };
+
+// // export default ProductCard;
+
+
+
+// import React from "react";
+// import { Link } from "react-router-dom";
+
+// import { useCart } from "../../context/CartContext";
+
+// const ProductCard = ({ item }) => {
+
+//   const { addToCart } = useCart();
+
+//   return (
+//     <div className="text-center group cursor-pointer w-full">
+
+//       <Link to={`/product/${item.id}`}>
+
+//         <div className="border border-gray-300 rounded-2xl p-5 flex items-center justify-center">
+//           <img
+//             src={item.image}
+//             className="h-[380px] object-cover rounded-xl transition-transform duration-300 group-hover:scale-105"
+//             alt={item.name}
+//           />
+//         </div>
+
+//       </Link>
+
+//       <h3 className="mt-4 text-xl text-[#2c1f14]">
+//         {item.name}
+//       </h3>
+
+//       <button
+//         onClick={() => addToCart(item)}
+//         className="mt-4 bg-[#c28b00] text-white px-6 py-2 rounded-full hover:bg-[#a87600]"
+//       >
+//         Add To Cart
+//       </button>
+
+//     </div>
+//   );
+// };
+
+// export default ProductCard;
+
+
+
 
 import React from "react";
 import { Link } from "react-router-dom";
-import { Eye, Heart } from "lucide-react";
+
+import { useCart } from "../../context/CartContext";
 
 const ProductCard = ({ item }) => {
-  return (
-    <Link to={`/product/${item.id}`}>
-      <div className="group bg-white rounded-2xl overflow-hidden border shadow-sm hover:shadow-2xl transition duration-500 cursor-pointer">
 
-        {/* Image */}
-        <div className="relative overflow-hidden bg-[#fff8dc]">
+  const {
+    cartItems,
+    addToCart,
+    increaseQty,
+    decreaseQty,
+  } = useCart();
+
+  /* CHECK EXISTING */
+  const existingItem = cartItems.find(
+    (cartItem) => cartItem.id === item.id
+  );
+
+  return (
+    <div className="text-center group cursor-pointer w-full">
+
+      {/* IMAGE */}
+      <Link to={`/product/${item.id}`}>
+
+        <div className="border border-gray-300 rounded-2xl p-5 flex items-center justify-center">
 
           <img
             src={item.image}
+            className="h-[380px] object-cover rounded-xl transition-transform duration-300 group-hover:scale-105"
             alt={item.name}
-            className="w-full h-80 object-cover group-hover:scale-110 transition duration-700"
           />
 
-          {/* Hover Icons */}
-          <div className="absolute top-4 right-4 flex flex-col gap-3 opacity-0 group-hover:opacity-100 transition duration-300">
-
-            <button className="bg-white p-3 rounded-full shadow hover:bg-red-600 hover:text-white transition">
-              <Heart size={18} />
-            </button>
-
-            <button className="bg-white p-3 rounded-full shadow hover:bg-[#c28b00] hover:text-white transition">
-              <Eye size={18} />
-            </button>
-
-          </div>
-
         </div>
 
-        {/* Content */}
-        <div className="p-5">
+      </Link>
 
-          <p className="text-xs uppercase tracking-[3px] text-gray-500">
-            {item.category}
-          </p>
+      {/* NAME */}
+      <h3 className="mt-4 text-xl text-[#2c1f14]">
+        {item.name}
+      </h3>
 
-          <h3 className="text-xl font-semibold text-gray-800 mt-2 line-clamp-1">
-            {item.name}
-          </h3>
+      {/* CART BUTTONS */}
+      <div className="mt-4 flex justify-center">
 
-          <p className="text-sm text-gray-500 mt-3 line-clamp-2 leading-6">
-            {item.description}
-          </p>
+        {!existingItem ? (
 
-          <div className="flex justify-between items-center mt-5">
+          <button
+            onClick={() => addToCart(item)}
+            className="bg-[#C28B00] text-white px-8 py-3 rounded-full hover:bg-[#a87600] transition"
+          >
+            Add To Cart
+          </button>
 
-            <h4 className="text-2xl font-bold text-red-600">
-              ₹ {item.price.toLocaleString()}
-            </h4>
+        ) : (
 
-            <span className="text-sm font-medium text-[#c28b00]">
-              {item.weight}
+          <div className="flex items-center gap-5 bg-[#c28b00] text-white px-6 py-3 rounded-full">
+
+            {/* MINUS */}
+            <button
+              onClick={() =>
+                decreaseQty(item.id)
+              }
+              className="text-2xl"
+            >
+              -
+            </button>
+
+            {/* QTY */}
+            <span className="text-lg font-semibold">
+              {existingItem.quantity}
             </span>
 
+            {/* PLUS */}
+            <button
+              onClick={() =>
+                increaseQty(item.id)
+              }
+              className="text-2xl"
+            >
+              +
+            </button>
+
           </div>
 
-        </div>
+        )}
 
       </div>
-    </Link>
+
+    </div>
   );
 };
 

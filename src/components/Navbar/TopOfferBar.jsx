@@ -2,8 +2,13 @@ import React from "react";
 import { MessageCircle } from "lucide-react";
 
 const TopOfferBar = () => {
+
+  // Replace with your WhatsApp Channel Link
+  const whatsappChannel =
+    " https://whatsapp.com/channel/0029Va9XbQ0JuyA7jwN36u0M";
+
   return (
-    <div className="bg-red-600 text-white text-sm py-2 flex items-center overflow-hidden">
+    <div className="bg-[#cc3b40] text-white text-sm py-2 flex items-center overflow-hidden">
 
       {/* Continuous Infinite Text */}
       <div className="flex-1 overflow-hidden">
@@ -48,7 +53,10 @@ const TopOfferBar = () => {
       </div>
 
       {/* WhatsApp Button */}
-      <button className="mr-4 ml-4 flex items-center gap-2 bg-green-500 px-4 py-1 rounded-full hover:scale-105 duration-300 shrink-0">
+      <button
+        onClick={() => window.open(whatsappChannel, "_blank")}
+        className="mr-4 ml-4 flex items-center gap-2 bg-green-500 px-4 py-1 rounded-full hover:scale-105 duration-300 shrink-0"
+      >
         <MessageCircle size={16} />
         Join WhatsApp
       </button>
