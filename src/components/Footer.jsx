@@ -18,7 +18,7 @@ import {
 
 import { useNavigate } from "react-router-dom";
 
-import logo from "../assets/images/GNV LOGO.png";
+import logo from "../assets/images/GNV Logo.png";
 
 const Footer = () => {
 
