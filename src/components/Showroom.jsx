@@ -89,6 +89,7 @@ const ShowroomsSection = () => {
                 src={item.image}
                 alt={item.name}
                 className="w-full h-[190px] object-cover group-hover:scale-105 transition duration-500"
+                loading="lazy"
               />
 
               {/* HOVER OVERLAY */}

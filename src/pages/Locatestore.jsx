@@ -153,7 +153,7 @@ const css = `
 
   /* HERO */
   .gnv-hero {
-    background: linear-gradient(135deg, #0d2518 0%, #1a3d28 60%, #0d2518 100%);
+    background: linear-gradient(135deg, #000000 0%, #000000 60%, #000000 100%);
     padding: 3.5rem 2rem 3rem;
     text-align: center;
     position: relative;
@@ -178,11 +178,11 @@ const css = `
     font-family: 'Cormorant Garamond', serif;
     font-size: clamp(2rem, 5vw, 3.6rem);
     font-weight: 500;
-    color: #f0e0b8;
+    color: #ffffff;
     line-height: 1.1;
     margin-bottom: .6rem;
   }
-  .gnv-hero h1 em { color: #c8960c; font-style: italic; }
+  .gnv-hero h1 em { color: #ffffff; font-style: italic; }
   .gnv-hero-rule {
     width: 40px;
     height: 1px;
@@ -191,7 +191,7 @@ const css = `
   }
   .gnv-hero p {
     font-size: .85rem;
-    color: rgba(255,255,255,0.55);
+    color: rgba(255, 255, 255, 0.9);
     font-weight: 300;
     letter-spacing: .04em;
     max-width: 420px;
@@ -346,9 +346,9 @@ const css = `
   }
   .gnv-card-addr {
     font-size: .75rem;
-    color: #7a6246;
+    color: #000000;
     line-height: 1.4;
-    font-weight: 300;
+    font-weight: 500;
   }
   .gnv-card-meta {
     display: flex;

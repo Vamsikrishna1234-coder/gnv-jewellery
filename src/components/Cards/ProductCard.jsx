@@ -1,165 +1,124 @@
-// // import React from "react";
-// // import { Link } from "react-router-dom";
-// // import { useCart } from "../../context/CartContext";
-
-// // const ProductCard = ({ item }) => {
-// //   const { addToCart } = useCart();
-
-// //   return (
-// //     <Link to={`/product/${item.id}`}>
-// //       <div className="text-center group cursor-pointer w-full">
-
-// //         <div className="border border-gray-300 rounded-2xl p-5 flex items-center justify-center">
-// //           <img
-// //             src={item.image}
-// //             className="h-[380px] object-cover rounded-xl transition-transform duration-300 group-hover:scale-105 rounded-2xl"
-// //             alt={item.name}
-// //           />
-// //         </div>
-
-// //         <h3 className="mt-4 text-xl text-[#2c1f14]">
-// //           {item.name}
-// //         </h3>
-
-// //       </div>
-// //     </Link>
-// //   );
-// // };
-
-// // export default ProductCard;
-
-
-
-// import React from "react";
-// import { Link } from "react-router-dom";
-
-// import { useCart } from "../../context/CartContext";
-
-// const ProductCard = ({ item }) => {
-
-//   const { addToCart } = useCart();
-
-//   return (
-//     <div className="text-center group cursor-pointer w-full">
-
-//       <Link to={`/product/${item.id}`}>
-
-//         <div className="border border-gray-300 rounded-2xl p-5 flex items-center justify-center">
-//           <img
-//             src={item.image}
-//             className="h-[380px] object-cover rounded-xl transition-transform duration-300 group-hover:scale-105"
-//             alt={item.name}
-//           />
-//         </div>
-
-//       </Link>
-
-//       <h3 className="mt-4 text-xl text-[#2c1f14]">
-//         {item.name}
-//       </h3>
-
-//       <button
-//         onClick={() => addToCart(item)}
-//         className="mt-4 bg-[#c28b00] text-white px-6 py-2 rounded-full hover:bg-[#a87600]"
-//       >
-//         Add To Cart
-//       </button>
-
-//     </div>
-//   );
-// };
-
-// export default ProductCard;
-
-
-
+// src/components/Cards/ProductCard.jsx
 
 import React from "react";
-import { Link } from "react-router-dom";
-
+import { useNavigate } from "react-router-dom";
 import { useCart } from "../../context/CartContext";
 
 const ProductCard = ({ item }) => {
 
-  const {
-    cartItems,
-    addToCart,
-    increaseQty,
-    decreaseQty,
-  } = useCart();
+  const navigate = useNavigate();
 
-  /* CHECK EXISTING */
-  const existingItem = cartItems.find(
-    (cartItem) => cartItem.id === item.id
-  );
+  const { addToCart } = useCart();
+
+  const handleProductClick = () => {
+    navigate(`/product/${item.id}`);
+  };
 
   return (
-    <div className="text-center group cursor-pointer w-full">
+    <div className="group w-full min-w-0">
 
-      {/* IMAGE */}
-      <Link to={`/product/${item.id}`}>
+      {/* ================= IMAGE BOX ================= */}
+      <div
+        onClick={handleProductClick}
+        className="
+          border
+          border-gray-300
 
-        <div className="border border-gray-300 rounded-2xl p-5 flex items-center justify-center">
+          rounded-[18px]
+          sm:rounded-2xl
 
-          <img
-            src={item.image}
-            className="h-[380px] object-cover rounded-xl transition-transform duration-300 group-hover:scale-105"
-            alt={item.name}
-          />
+          p-2
+          sm:p-4
+          md:p-5
 
-        </div>
+          overflow-hidden
+          bg-white
 
-      </Link>
+          cursor-pointer
+        "
+      >
 
-      {/* NAME */}
-      <h3 className="mt-4 text-xl text-[#2c1f14]">
+        <img
+          src={item.image}
+          alt={item.name}
+          className="
+            w-full
+
+            h-[180px]
+            xs:h-[200px]
+            sm:h-[260px]
+            md:h-[320px]
+            lg:h-[380px]
+
+            object-cover
+            object-center
+
+            rounded-xl
+
+            group-hover:scale-105
+            transition
+            duration-300
+          "
+        />
+
+      </div>
+
+      {/* ================= PRODUCT NAME ================= */}
+      <h3
+        className="
+          mt-3
+          sm:mt-4
+
+          text-center
+          text-[#2c1f14]
+
+          font-medium
+
+          text-[16px]
+          sm:text-[20px]
+          md:text-2xl
+
+          leading-snug
+
+          px-1
+        "
+      >
         {item.name}
       </h3>
 
-      {/* CART BUTTONS */}
-      <div className="mt-4 flex justify-center">
 
-        {!existingItem ? (
+      {/* ================= BUTTON ================= */}
+      <div className="flex justify-center mt-3 sm:mt-4">
 
-          <button
-            onClick={() => addToCart(item)}
-            className="bg-[#C28B00] text-white px-8 py-3 rounded-full hover:bg-[#a87600] transition"
-          >
-            Add To Cart
-          </button>
+        <button
+          onClick={() => addToCart(item)}
+          className="
+            bg-[#c28b00]
+            hover:bg-[#a97800]
 
-        ) : (
+            text-white
 
-          <div className="flex items-center gap-5 bg-[#c28b00] text-white px-6 py-3 rounded-full">
+            px-5
+            sm:px-7
+            md:px-8
 
-            {/* MINUS */}
-            <button
-              onClick={() =>
-                decreaseQty(item.id)
-              }
-              className="text-2xl"
-            >
-              -
-            </button>
+            py-2
+            sm:py-2.5
+            md:py-3
 
-            {/* QTY */}
-            <span className="text-lg font-semibold">
-              {existingItem.quantity}
-            </span>
+            rounded-full
 
-            {/* PLUS */}
-            <button
-              onClick={() =>
-                increaseQty(item.id)
-              }
-              className="text-2xl"
-            >
-              +
-            </button>
+            text-[13px]
+            sm:text-sm
+            md:text-base
 
-          </div>
+            transition
 
-        )}
+            whitespace-nowrap
+          "
+        >
+          Add To Cart
+        </button>
 
       </div>
 

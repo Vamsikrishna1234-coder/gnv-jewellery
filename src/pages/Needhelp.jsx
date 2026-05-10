@@ -44,7 +44,7 @@ const NeedHelp = () => {
 
       {/* ================= HERO ================= */}
 
-      <div className="bg-[#140d07] text-white py-24 px-6 relative overflow-hidden">
+      <div className="bg-black text-white py-24 px-6 relative overflow-hidden">
 
         <div className="absolute top-[-120px] left-[-100px] w-[320px] h-[320px] bg-[#c28b00]/10 blur-[120px]" />
 
@@ -74,7 +74,7 @@ const NeedHelp = () => {
         <div className="bg-white border border-[#efe2ca] rounded-[35px] shadow-xl overflow-hidden">
 
           {/* HEADER */}
-          <div className="bg-[#140d07] px-10 py-10 text-white">
+          <div className="bg-black px-10 py-10 text-white">
 
             <p className="uppercase tracking-[4px] text-[#c28b00] text-xs">
               Customer Support

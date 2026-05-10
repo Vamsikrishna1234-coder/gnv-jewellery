@@ -12,86 +12,349 @@ const FeaturedCollections = () => {
   const navigate = useNavigate();
 
   return (
-    <section className="bg-[#efe3cc] py-16 px-6">
+    <section
+      className="
+        bg-[#efe3cc]
 
-      {/* TITLE */}
-      <div className="text-center mb-12">
-        <h2 className="text-4xl font-serif tracking-wide text-[#1a1a1a]">
+        py-10
+        sm:py-12
+        md:py-16
+
+        px-4
+        sm:px-5
+        md:px-6
+
+        overflow-hidden
+      "
+    >
+
+      {/* ================= TITLE ================= */}
+      <div
+        className="
+          text-center
+
+          mb-8
+          sm:mb-10
+          md:mb-12
+        "
+      >
+
+        <h2
+          className="
+            font-serif
+            tracking-wide
+            text-[#1a1a1a]
+
+            text-[28px]
+            sm:text-[36px]
+            md:text-4xl
+
+            leading-tight
+          "
+        >
           FEATURED JEWELLERY COLLECTIONS
         </h2>
-        <p className="text-gray-600 mt-3">
+
+        <p
+          className="
+            text-gray-600
+
+            mt-2
+            md:mt-3
+
+            text-sm
+            sm:text-base
+          "
+        >
           A selection of jewellery designs across categories
         </p>
+
       </div>
 
-      {/* GRID */}
-      <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-6">
+      {/* ================= GRID ================= */}
+      <div
+        className="
+          max-w-7xl
+          mx-auto
 
-        {/* LEFT BIG → GOLD */}
+          grid
+          md:grid-cols-2
+
+          gap-4
+          sm:gap-5
+          md:gap-6
+        "
+      >
+
+        {/* ================= LEFT BIG CARD ================= */}
         <div
           onClick={() => navigate("/gold")}
-          className="relative rounded-2xl overflow-hidden group aspect-[3/4] cursor-pointer"
+          className="
+            relative
+            rounded-2xl
+            overflow-hidden
+            group
+            cursor-pointer
+
+            aspect-[4/5]
+            md:aspect-[3/4]
+          "
         >
 
+          {/* IMAGE */}
           <img
             src={img1}
-            className="absolute inset-0 w-full h-full object-cover grayscale group-hover:grayscale-0 transition duration-500"
+            alt="Layered Luxe"
+            className="
+              absolute
+              inset-0
+
+              w-full
+              h-full
+
+              object-cover
+
+              grayscale
+              group-hover:grayscale-0
+
+              transition
+              duration-500
+            "
           />
 
+          {/* OVERLAY */}
           <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/20 to-transparent" />
 
-          <div className="absolute top-10 right-10 text-white text-right">
-            <h3 className="text-3xl font-serif">LAYERED LUXE</h3>
-            <p className="text-sm mt-2 text-gray-300">
+          {/* CONTENT */}
+          <div
+            className="
+              absolute
+
+              top-5
+              right-5
+
+              sm:top-8
+              sm:right-8
+
+              md:top-10
+              md:right-10
+
+              text-white
+              text-right
+            "
+          >
+
+            <h3
+              className="
+                font-serif
+
+                text-[22px]
+                sm:text-[28px]
+                md:text-3xl
+
+                leading-tight
+              "
+            >
+              LAYERED LUXE
+            </h3>
+
+            <p
+              className="
+                mt-2
+                text-gray-300
+
+                text-[12px]
+                sm:text-sm
+              "
+            >
               Stack it. Style it. Own it.
             </p>
+
           </div>
 
         </div>
 
-        {/* RIGHT */}
-        <div className="grid grid-rows-2 gap-2">
+        {/* ================= RIGHT SIDE ================= */}
+        <div
+          className="
+            grid
 
-          {/* TOP → DIAMOND */}
+            grid-cols-1
+            sm:grid-cols-2
+            md:grid-cols-1
+
+            gap-4
+            sm:gap-5
+            md:gap-6
+          "
+        >
+
+          {/* ================= TOP CARD ================= */}
           <div
             onClick={() => navigate("/diamond")}
-            className="relative rounded-2xl overflow-hidden group aspect-[3/2] cursor-pointer"
+            className="
+              relative
+              rounded-2xl
+              overflow-hidden
+              group
+              cursor-pointer
+
+              aspect-[4/3]
+              md:aspect-[3/2]
+            "
           >
 
+            {/* IMAGE */}
             <img
               src={img2}
-              className="absolute inset-0 w-full h-full object-cover grayscale group-hover:grayscale-0 transition duration-500"
+              alt="Ethnic Glow"
+              className="
+                absolute
+                inset-0
+
+                w-full
+                h-full
+
+                object-cover
+
+                grayscale
+                group-hover:grayscale-0
+
+                transition
+                duration-500
+              "
             />
 
+            {/* OVERLAY */}
             <div className="absolute inset-0 bg-black/40" />
 
-            <div className="absolute bottom-6 right-6 text-white text-right">
-              <h3 className="text-2xl font-serif">ETHNIC GLOW</h3>
-              <p className="text-sm text-gray-300">
+            {/* CONTENT */}
+            <div
+              className="
+                absolute
+
+                bottom-4
+                right-4
+
+                sm:bottom-5
+                sm:right-5
+
+                md:bottom-6
+                md:right-6
+
+                text-white
+                text-right
+              "
+            >
+
+              <h3
+                className="
+                  font-serif
+
+                  text-[20px]
+                  sm:text-[22px]
+                  md:text-2xl
+                "
+              >
+                ETHNIC GLOW
+              </h3>
+
+              <p
+                className="
+                  text-gray-300
+
+                  text-[12px]
+                  sm:text-sm
+                "
+              >
                 Tradition with a twist.
               </p>
+
             </div>
 
           </div>
 
-          {/* BOTTOM → DIAMOND */}
+          {/* ================= BOTTOM CARD ================= */}
           <div
             onClick={() => navigate("/diamond")}
-            className="relative rounded-2xl overflow-hidden group aspect-[3/2] cursor-pointer"
+            className="
+              relative
+              rounded-2xl
+              overflow-hidden
+              group
+              cursor-pointer
+
+              aspect-[4/3]
+              md:aspect-[3/2]
+            "
           >
 
+            {/* IMAGE */}
             <img
               src={img3}
-              className="absolute inset-0 w-full h-full object-cover grayscale group-hover:grayscale-0 transition duration-500"
+              alt="Diamond Whisper"
+              className="
+                absolute
+                inset-0
+
+                w-full
+                h-full
+
+                object-cover
+
+                grayscale
+                group-hover:grayscale-0
+
+                transition
+                duration-500
+              "
             />
 
+            {/* OVERLAY */}
             <div className="absolute inset-0 bg-black/40" />
 
-            <div className="absolute bottom-6 right-6 text-white text-right">
-              <h3 className="text-2xl font-serif">DIAMOND WHISPER</h3>
-              <p className="text-sm text-gray-300">
+            {/* CONTENT */}
+            <div
+              className="
+                absolute
+
+                bottom-4
+                right-4
+
+                sm:bottom-5
+                sm:right-5
+
+                md:bottom-6
+                md:right-6
+
+                text-white
+                text-right
+              "
+            >
+
+              <h3
+                className="
+                  font-serif
+
+                  text-[20px]
+                  sm:text-[22px]
+                  md:text-2xl
+                "
+              >
+                DIAMOND WHISPER
+              </h3>
+
+              <p
+                className="
+                  text-gray-300
+
+                  text-[12px]
+                  sm:text-sm
+                "
+              >
                 Delicate shine. Big impression.
               </p>
+
             </div>
 
           </div>

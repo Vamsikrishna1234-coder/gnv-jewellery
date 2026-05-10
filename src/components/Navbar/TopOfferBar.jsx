@@ -5,7 +5,7 @@ const TopOfferBar = () => {
 
   // Replace with your WhatsApp Channel Link
   const whatsappChannel =
-    " https://whatsapp.com/channel/0029Va9XbQ0JuyA7jwN36u0M";
+    "https://whatsapp.com/channel/0029Va9XbQ0JuyA7jwN36u0M";
 
   return (
     <div className="bg-[#cc3b40] text-white text-sm py-2 flex items-center overflow-hidden">
@@ -55,9 +55,27 @@ const TopOfferBar = () => {
       {/* WhatsApp Button */}
       <button
         onClick={() => window.open(whatsappChannel, "_blank")}
-        className="mr-4 ml-4 flex items-center gap-2 bg-green-500 px-4 py-1 rounded-full hover:scale-105 duration-300 shrink-0"
+        className="
+          mr-4 ml-4
+          flex items-center gap-2
+          bg-green-500
+          px-4 py-1
+          rounded-full
+          hover:scale-105
+          duration-300
+          shrink-0
+
+          max-[640px]:px-3
+          max-[640px]:py-[6px]
+          max-[640px]:text-[11px]
+          max-[640px]:mr-2
+          max-[640px]:ml-2
+        "
       >
-        <MessageCircle size={16} />
+        <MessageCircle
+          size={16}
+          className="max-[640px]:w-[13px] max-[640px]:h-[13px]"
+        />
         Join WhatsApp
       </button>
 
@@ -82,6 +100,21 @@ const TopOfferBar = () => {
             }
             to {
               transform: translateX(-50%);
+            }
+          }
+
+          /* MOBILE RESPONSIVE ONLY */
+          @media (max-width: 640px) {
+
+            .marquee-wrapper {
+              animation: moveForever 14s linear infinite;
+            }
+
+            .marquee-content span {
+              font-size: 11px;
+              margin-left: 18px !important;
+              margin-right: 18px !important;
+              line-height: 1.4;
             }
           }
         `}

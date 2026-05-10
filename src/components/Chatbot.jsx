@@ -21,34 +21,6 @@ const WhatsAppChat = () => {
   return (
     <div className="fixed bottom-9 right-5 z-[9999] flex flex-col items-end gap-3">
 
-      {/* Chat Popup Message */}
-      {showMessage && (
-        <div className="relative bg-white shadow-2xl rounded-2xl px-5 py-6 w-[280px] border border-gray-200 animate-fadeIn">
-
-          {/* Close Button */}
-          <button
-            onClick={() => setShowMessage(false)}
-            className="absolute top-2 right-2 text-gray-500 hover:text-black"
-          >
-            <X size={16} />
-          </button>
-
-          <p className="text-sm text-[#cc3b40] mb-1">
-            GNV JEWELLERS
-          </p>
-
-          <h4 className="font-semibold text-gray-800 text-[15px] leading-6">
-            🙏 Namaste sir/madam, Chat with Our experts for more Designs!
-          </h4>
-
-          <p className="text-sm text-black-500 mt-1">
-            Our team is online now.chat with us..!
-          </p>
-          
-           
-
-        </div>
-      )}
 
       {/* WhatsApp Floating Button */}
       <a

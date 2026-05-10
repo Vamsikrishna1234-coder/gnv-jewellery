@@ -37,6 +37,7 @@ import ProductDetails from "./pages/ProductDetails";
 
 /* Scroll to Top */
 import ScrollToTop from "./components/ScrollToTop";
+import ScrollToTopButton from "./components/ScrollToTopButton";
 
 function App() {
   return (
@@ -44,6 +45,9 @@ function App() {
 
       {/* Scroll to Top on Route Change */}
       <ScrollToTop />
+
+      {/* Scroll to Top Button */}
+      <ScrollToTopButton />
 
       {/* Common Header */}
       <Navbar />

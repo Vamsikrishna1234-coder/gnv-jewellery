@@ -27,6 +27,7 @@ const FounderSection = () => {
               src={img1}
               alt="Kiran Garu"
               className="w-full h-[400px] object-cover hover:scale-105 transition duration-500"
+              loading="lazy"
             />
           </div>
 
@@ -80,6 +81,7 @@ const FounderSection = () => {
               src={img2}
               alt="Pruthvi Garu"
               className="w-full h-[400px] object-cover hover:scale-105 transition duration-500"
+              loading="lazy"
             />
           </div>
 

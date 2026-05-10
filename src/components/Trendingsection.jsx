@@ -8,76 +8,36 @@ import { useNavigate } from "react-router-dom";
 const collections = [
   {
     id: "gold",
-    badge: "18kt Gold",
+    badge: "18KT GOLD",
     route: "/gold",
-    bg: "from-[#1a0a00] to-[#4a2800]",
-    accentColor: "#e8b84b",
     image: img1,
-    icon: (
-      <svg width="70" height="70" viewBox="0 0 70 70">
-        <circle cx="35" cy="35" r="28" fill="none" stroke="#e8b84b" strokeWidth="2.5"/>
-        <circle cx="35" cy="35" r="18" fill="none" stroke="#e8b84b" strokeWidth="1.5"/>
-        <path
-          d="M35 10 L38 24 L52 20 L43 30 L55 35 L43 40 L52 50 L38 46 L35 60 L32 46 L18 50 L27 40 L15 35 L27 30 L18 20 L32 24 Z"
-          fill="#e8b84b" opacity="0.8"
-        />
-      </svg>
-    ),
   },
+
   {
     id: "diamond",
-    badge: "Diamond rings",
+    badge: "DIAMOND RINGS",
     route: "/diamond",
-    bg: "from-[#0d1b2a] to-[#1b2838]",
-    accentColor: "#c8e6ff",
     image: img2,
-    icon: (
-      <svg width="70" height="70" viewBox="0 0 70 70">
-        <polygon points="35,5 60,25 55,55 15,55 10,25" fill="none" stroke="#c8e6ff" strokeWidth="2"/>
-        <polygon points="35,5 60,25 35,45 10,25" fill="rgba(200,230,255,0.15)" stroke="#c8e6ff" strokeWidth="1.5"/>
-        <circle cx="35" cy="5" r="3" fill="#c8e6ff"/>
-      </svg>
-    ),
   },
+
   {
     id: "diamond-pendants",
-    badge: "Diamond-Pendants",
+    badge: "DIAMOND-PENDANTS",
     route: "/diamond",
-    bg: "from-[#2d0a1e] to-[#4a1030]",
-    accentColor: "#f4c8e8",
     image: img3,
-    icon: (
-      <svg width="70" height="70" viewBox="0 0 70 70">
-        <circle cx="35" cy="28" r="16" fill="none" stroke="#f4c8e8" strokeWidth="2"/>
-        <path d="M22 38 Q35 55 48 38" fill="none" stroke="#f4c8e8" strokeWidth="2"/>
-        <path d="M35 12 L35 5 M28 15 L23 10 M42 15 L47 10" stroke="#f4c8e8" strokeWidth="1.5" strokeLinecap="round"/>
-        <polygon points="35,22 38,28 35,34 32,28" fill="#f4c8e8" opacity="0.8"/>
-      </svg>
-    ),
   },
+
   {
     id: "silver",
-    badge: "999 Pure Silver",
+    badge: "999 PURE SILVER",
     route: "/silver",
-    bg: "from-[#0a1628] to-[#142540]",
-    accentColor: "#d0d8e8",
     image: img4,
-    icon: (
-      <svg width="70" height="70" viewBox="0 0 70 70">
-        <circle cx="35" cy="32" r="14" fill="none" stroke="#d0d8e8" strokeWidth="2.5"/>
-        <circle cx="35" cy="32" r="7" fill="rgba(208,216,232,0.25)" stroke="#d0d8e8" strokeWidth="1.5"/>
-        <path
-          d="M35 18 L35 10 M48 22 L54 16 M52 35 L60 35 M22 22 L16 16 M18 35 L10 35"
-          stroke="#d0d8e8" strokeWidth="1.5" strokeLinecap="round"
-        />
-      </svg>
-    ),
   },
 ];
 
 function JewelryCard({ item }) {
   const [imgError, setImgError] = useState(false);
-  
+
   const navigate = useNavigate();
 
   const handleClick = () => {
@@ -87,73 +47,130 @@ function JewelryCard({ item }) {
   return (
     <div
       onClick={handleClick}
-      className="relative rounded-2xl overflow-hidden cursor-pointer group"
-      style={{ aspectRatio: "0.82", boxShadow: "0 4px 20px rgba(0,0,0,0.2)" }}
+      className="
+        relative
+        overflow-hidden
+        cursor-pointer
+        group
+
+        rounded-[18px]
+        sm:rounded-[22px]
+
+        w-full
+      "
+      style={{
+        aspectRatio: "0.78",
+        boxShadow: "0 6px 22px rgba(0,0,0,0.18)",
+      }}
     >
-      {/* Image or fallback */}
+      {/* IMAGE */}
       {!imgError ? (
         <img
           src={item.image}
-          alt={item.title}
+          alt={item.badge}
           onError={() => setImgError(true)}
-          className="absolute inset-0 w-full h-full object-cover"
+          className="
+            absolute
+            inset-0
+            w-full
+            h-full
+            object-cover
+
+            transition-transform
+            duration-500
+            group-hover:scale-105
+          "
+          loading="lazy"
         />
       ) : (
-        <div className={`absolute inset-0 bg-gradient-to-br ${item.bg} flex items-center justify-center`}>
-          {item.icon}
-        </div>
+        <div className="absolute inset-0 bg-gray-300" />
       )}
 
-      {/* Hover zoom on image */}
-      <div className="absolute inset-0 transition-transform duration-500 group-hover:scale-105 bg-transparent" />
+      {/* DARK OVERLAY */}
+      <div
+        className="
+          absolute
+          inset-0
+          bg-gradient-to-t
+          from-black/50
+          via-black/10
+          to-transparent
+        "
+      />
 
-      {/* Badge */}
-      {item.badge && (
-        <div
-          className="absolute top-3 left-3 text-[15px] font-medium tracking-widest uppercase px-3 py-1 rounded-full"
-          style={{ background: "#", color: "#ffffff" }}
+      {/* TITLE */}
+      <div
+        className="
+          absolute
+          top-3
+          left-3
+
+          bg-black/65
+          backdrop-blur-sm
+
+          px-3
+          py-2
+
+          rounded-full
+        "
+      >
+        <h3
+          className="
+            text-white
+            font-semibold
+
+            text-[11px]
+            sm:text-[13px]
+            md:text-[15px]
+
+            tracking-[0.12em]
+            uppercase
+            leading-tight
+          "
         >
           {item.badge}
-        </div>
-      )}
-
-      {/* Overlay gradient */}
-      <div
-        className="absolute bottom-0 left-0 right-0 flex flex-col justify-end p-4"
-        style={{
-          
-          paddingTop: "4rem",
-        }}
-      >
-        <p className="text-[10px] tracking-[0.14em] uppercase mb-1" style={{ color: "rgba(255,255,255,0.65)" }}>
-          {item.category}
-        </p>
-
-        <h3
-          className="font-serif text-lg font-semibold leading-snug mb-1 whitespace-pre-line"
-          style={{ fontFamily: "'Georgia', serif", color: "#fff" }}
-        >
-          {item.title}
         </h3>
+      </div>
 
-        {item.subtitle && (
-          <p className="text-[11px] mb-2" style={{ color: "rgba(255,255,255,0.75)" }}>
-            {item.subtitle}
-          </p>
-        )}
-
-        {item.price && (
-          <p className="text-base font-semibold mb-2" style={{ color: "#f4c542" }}>
-            {item.price}
-          </p>
-        )}
-
+      {/* BUTTON */}
+      <div
+        className="
+          absolute
+          bottom-4
+          left-1/2
+          -translate-x-1/2
+        "
+      >
         <button
-          onClick={(e) => { e.stopPropagation(); handleClick(); }}
-          className="self-start text-[10px] font-medium uppercase tracking-widest px-4 py-[5px] rounded-full transition-opacity duration-200 hover:opacity-80"
-          style={{ background: "#ff0000", color: "#ffffff" }}
+          onClick={(e) => {
+            e.stopPropagation();
+            handleClick();
+          }}
+          className="
+            bg-red-600
+            hover:bg-red-700
+
+            text-white
+            uppercase
+
+            text-[9px]
+            sm:text-[10px]
+
+            tracking-wide
+            font-semibold
+
+            px-4
+            py-2
+
+            rounded-full
+
+            transition-all
+            duration-300
+
+            whitespace-nowrap
+          "
         >
-          View Collection
+          VIEW COLLECTION
         </button>
       </div>
     </div>
@@ -163,24 +180,58 @@ function JewelryCard({ item }) {
 export default function TrendingSection() {
   return (
     <section
-      className="py-16 px-6"
+      className="
+        py-10
+        sm:py-12
+        md:py-16
+
+        px-4
+        sm:px-5
+        md:px-6
+      "
       style={{
-        background: "linear-gradient(135deg, #f5e6c8 0%, #fdf3e3 50%, #f0e0c0 100%)",
+        background:
+          "linear-gradient(135deg, #f5e6c8 0%, #fdf3e3 50%, #f0e0c0 100%)",
       }}
     >
+      {/* HEADING */}
       <h2
-        className="text-center text-4xl mb-10"
+        className="
+          text-center
+
+          text-[34px]
+          sm:text-[42px]
+          md:text-5xl
+
+          mb-8
+          sm:mb-10
+        "
         style={{
           fontFamily: "'Georgia', serif",
-          fontWeight: 600,
+          fontWeight: 700,
           color: "#6b2d2d",
-          letterSpacing: "0.02em",
+          letterSpacing: "0.01em",
         }}
       >
         What's Trending
       </h2>
 
-      <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-7xl mx-auto">
+      {/* GRID */}
+      <div
+        className="
+          grid
+
+          grid-cols-2
+          md:grid-cols-4
+
+          gap-5
+          sm:gap-6
+          md:gap-7
+
+          max-w-7xl
+          mx-auto
+        "
+      >
         {collections.map((item) => (
           <JewelryCard key={item.id} item={item} />
         ))}
