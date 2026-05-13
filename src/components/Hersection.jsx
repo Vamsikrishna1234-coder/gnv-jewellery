@@ -379,7 +379,7 @@ const HeroSection = () => {
         group
         bg-black
 
-        h-[170px]
+        h-[180px]
         sm:h-[300px]
         md:h-[420px]
         lg:h-[560px]
