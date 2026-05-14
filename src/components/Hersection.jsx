@@ -324,8 +324,6 @@
 
 
 
-
-
 import React, { useRef, useState } from "react";
 import {
   Volume2,
@@ -378,14 +376,24 @@ const HeroSection = () => {
         overflow-hidden
         group
         bg-black
+        w-full
 
         h-[180px]
-        sm:h-[300px]
+
+        xs:h-[220px]
+
+        sm:h-[280px]
+
         md:h-[420px]
+
         lg:h-[560px]
+
         xl:h-[770px]
+
+        2xl:h-[770px]
       "
     >
+
       {/* ================= VIDEO SCREEN ================= */}
       {currentIndex === 0 && (
         <>
@@ -399,15 +407,10 @@ const HeroSection = () => {
               absolute
               top-0
               left-0
-
               w-full
               h-full
-
-              object-fill
-              md:object-cover
-
+              object-cover
               object-center
-
               videoFloat
             "
           >
@@ -424,31 +427,36 @@ const HeroSection = () => {
               absolute
               z-30
 
-              right-3
-              bottom-3
+              right-2
+              bottom-2
 
-              sm:right-5
-              sm:bottom-5
+              sm:right-4
+              sm:bottom-4
 
-              md:right-7
-              md:bottom-7
+              md:right-6
+              md:bottom-6
 
               bg-black/60
               p-2
-              sm:p-3
+              md:p-3
 
               rounded-full
               text-white
-
               hover:bg-black
               duration-300
               backdrop-blur-md
             "
           >
             {isMuted ? (
-              <VolumeX size={20} className="sm:w-6 sm:h-6" />
+              <VolumeX
+                size={18}
+                className="sm:w-5 sm:h-5 md:w-6 md:h-6"
+              />
             ) : (
-              <Volume2 size={20} className="sm:w-6 sm:h-6" />
+              <Volume2
+                size={18}
+                className="sm:w-5 sm:h-5 md:w-6 md:h-6"
+              />
             )}
           </button>
 
@@ -459,7 +467,7 @@ const HeroSection = () => {
               absolute
               z-30
 
-              right-3
+              right-2
               sm:right-4
               md:right-6
 
@@ -467,14 +475,15 @@ const HeroSection = () => {
               -translate-y-1/2
 
               bg-black/60
+
               p-2
-              sm:p-3
+              md:p-3
 
               rounded-full
               text-white
 
               opacity-100
-              md:opacity-0
+              lg:opacity-0
               group-hover:opacity-100
 
               transition
@@ -483,7 +492,10 @@ const HeroSection = () => {
               backdrop-blur-md
             "
           >
-            <ChevronRight size={22} className="sm:w-7 sm:h-7" />
+            <ChevronRight
+              size={20}
+              className="sm:w-6 sm:h-6 md:w-7 md:h-7"
+            />
           </button>
         </>
       )}
@@ -501,12 +513,8 @@ const HeroSection = () => {
               className="
                 w-full
                 h-full
-
-                object-fill
-                md:object-cover
-
+                object-cover
                 object-center
-
                 liquidReveal
               "
               loading="lazy"
@@ -523,7 +531,7 @@ const HeroSection = () => {
               absolute
               z-30
 
-              left-3
+              left-2
               sm:left-4
               md:left-6
 
@@ -531,14 +539,15 @@ const HeroSection = () => {
               -translate-y-1/2
 
               bg-black/60
+
               p-2
-              sm:p-3
+              md:p-3
 
               rounded-full
               text-white
 
               opacity-100
-              md:opacity-0
+              lg:opacity-0
               group-hover:opacity-100
 
               transition
@@ -547,7 +556,10 @@ const HeroSection = () => {
               backdrop-blur-md
             "
           >
-            <ChevronLeft size={22} className="sm:w-7 sm:h-7" />
+            <ChevronLeft
+              size={20}
+              className="sm:w-6 sm:h-6 md:w-7 md:h-7"
+            />
           </button>
 
           {/* NEXT BUTTON */}
@@ -557,7 +569,7 @@ const HeroSection = () => {
               absolute
               z-30
 
-              right-3
+              right-2
               sm:right-4
               md:right-6
 
@@ -565,14 +577,15 @@ const HeroSection = () => {
               -translate-y-1/2
 
               bg-black/60
+
               p-2
-              sm:p-3
+              md:p-3
 
               rounded-full
               text-white
 
               opacity-100
-              md:opacity-0
+              lg:opacity-0
               group-hover:opacity-100
 
               transition
@@ -581,7 +594,10 @@ const HeroSection = () => {
               backdrop-blur-md
             "
           >
-            <ChevronRight size={22} className="sm:w-7 sm:h-7" />
+            <ChevronRight
+              size={20}
+              className="sm:w-6 sm:h-6 md:w-7 md:h-7"
+            />
           </button>
         </>
       )}
@@ -593,6 +609,7 @@ const HeroSection = () => {
 
           .videoFloat {
             animation: videoFloat 8s ease-in-out infinite alternate;
+            will-change: transform;
           }
 
           @keyframes videoFloat {
@@ -602,28 +619,28 @@ const HeroSection = () => {
             }
 
             100% {
-              transform: scale(1.05) translateY(-10px);
+              transform: scale(1.04) translateY(-8px);
             }
           }
 
           /* ================= LIQUID REVEAL ================= */
 
           .liquidReveal {
-            animation: liquidReveal 1.3s cubic-bezier(0.22, 1, 0.36, 1);
+            animation: liquidReveal 1.2s cubic-bezier(0.22, 1, 0.36, 1);
+            will-change: transform, opacity;
           }
 
           @keyframes liquidReveal {
 
             0% {
               opacity: 0;
-              transform: scale(1.20) rotate(-2deg);
+              transform: scale(1.15) rotate(-1deg);
               clip-path: circle(0% at 50% 50%);
-              filter: brightness(1.3);
+              filter: brightness(1.15);
             }
 
             50% {
               opacity: 1;
-              filter: brightness(1.1);
             }
 
             100% {
@@ -643,7 +660,16 @@ const HeroSection = () => {
             }
 
             .liquidReveal {
-              animation-duration: 0.9s;
+              animation-duration: 0.8s;
+            }
+          }
+
+          /* ================= LARGE SCREEN FIX ================= */
+
+          @media (min-width: 1440px) {
+
+            .videoFloat {
+              transform: scale(1.02);
             }
           }
         `}
@@ -653,8 +679,3 @@ const HeroSection = () => {
 };
 
 export default HeroSection;
-
-
-
-
-
