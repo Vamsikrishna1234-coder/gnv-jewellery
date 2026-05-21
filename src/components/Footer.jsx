@@ -290,7 +290,15 @@ const Footer = () => {
                 rel="noreferrer"
                 className="text-white hover:underline"
               >
-                3Kal Media
+                3Kal Media 
+              </a>
+
+              <a  
+                href="https://wa.me/9989017936"
+                target="_blank"
+                rel="noreferrer"
+                className="contact-footer">
+                (9989017936)
               </a>
             </p>
 

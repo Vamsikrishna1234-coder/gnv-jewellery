@@ -4,11 +4,13 @@ import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
 /* CATEGORY IMAGES */
-import goldImg from "../assets/images/jewel image.jpg";
-import silverImg from "../assets/images/jewel image.jpg";
-import diamondImg from "../assets/images/jewel image.jpg";
-import bridalImg from "../assets/images/jewel image.jpg";
-import coinImg from "../assets/images/jewel image.jpg";
+import goldImg from "../assets/images/goldred.png";
+import silverImg from "../assets/images/silverred.png";
+import diamondImg from "../assets/images/diamondred.jpeg";
+import bridalImg from "../assets/images/bridalred.png";
+import coinImg from "../assets/images/coinsred.png";
+
+import img1 from "../assets/images/allprod.jpg"
 
 const Products = () => {
 
@@ -60,7 +62,7 @@ const Products = () => {
         >
 
           <img
-            src="https://images.unsplash.com/photo-1617038220319-276d3cfab638"
+            src={img1}
             className="absolute inset-0 w-full h-full object-cover"
             alt="Jewellery"
             loading="lazy"
@@ -272,7 +274,7 @@ const Products = () => {
                   src={item.image}
                   alt={item.name}
                   className="
-                    w-full
+                    w-[380px]
                     
                     h-[220px]
                     sm:h-[300px]

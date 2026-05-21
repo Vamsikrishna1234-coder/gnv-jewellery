@@ -138,7 +138,7 @@ const Diamond = () => {
     "rings",
     "necklaces",
     "bangles",
-    "haaram",
+    
     "earrings",
   ];
 
@@ -709,9 +709,7 @@ const Diamond = () => {
                 Bangles
               </option>
 
-              <option value="haaram">
-                Haaram
-              </option>
+              
 
               <option value="earrings">
                 Earrings

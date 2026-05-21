@@ -120,6 +120,7 @@ const FeaturedCollections = () => {
               transition
               duration-500
             "
+             loading="lazy"
           />
 
           {/* OVERLAY */}
@@ -223,6 +224,7 @@ const FeaturedCollections = () => {
                 transition
                 duration-500
               "
+               loading="lazy"
             />
 
             {/* OVERLAY */}
@@ -308,6 +310,7 @@ const FeaturedCollections = () => {
                 transition
                 duration-500
               "
+              loading="lazy"
             />
 
             {/* OVERLAY */}

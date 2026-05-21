@@ -134,7 +134,6 @@ const Silver = () => {
 
   const categories = [
     "All",
-    "anklets",
     "rings",
     "bracelets",
     "chains",
@@ -693,9 +692,9 @@ const Silver = () => {
             >
               <option value="All">Type</option>
 
-              <option value="anklets">
+              {/* <option value="anklets">
                 Anklets
-              </option>
+              </option> */}
 
               <option value="rings">
                 Rings

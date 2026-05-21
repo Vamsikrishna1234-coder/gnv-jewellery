@@ -185,6 +185,7 @@ const ProductDetails = () => {
                 src={mainImage}
                 alt={product.name}
                 className="w-full h-full object-cover transition-all duration-300"
+                loading="lazy"
               />
             </div>
 
@@ -204,6 +205,7 @@ const ProductDetails = () => {
                     src={img}
                     alt={`${product.name} ${i + 1}`}
                     className="w-full h-full object-cover"
+                    loading="lazy"
                   />
                 </div>
               ))}

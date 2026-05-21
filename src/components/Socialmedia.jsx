@@ -89,7 +89,7 @@ const SocialMediaSection = () => {
               <iframe
                 src={getInstagramEmbed(reel.link)}
                 className="w-full h-full"
-                allowTransparency={true}
+                // allowTransparency="true"
                 allow="encrypted-media"
                 scrolling="no"
                 frameBorder="0"

@@ -138,7 +138,7 @@ const Gold = () => {
     "chains",
     "rings",
     "necklace",
-    "bracelets",
+    "earrings",
   ];
 
   const handleViewMore = () => {
@@ -715,8 +715,8 @@ const Gold = () => {
                 Necklace
               </option>
 
-              <option value="bracelets">
-                Bracelets
+              <option value="earrings">
+                Earrings
               </option>
             </select>
 

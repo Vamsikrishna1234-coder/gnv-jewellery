@@ -486,9 +486,9 @@ const LocateStore = () => {
                 </div>
               ) : (
                 <div className="gnv-card-images">
-                  <img src={store.images[0]} alt={store.name} />
+                  <img src={store.images[0]} alt={store.name} loading="lazy"/>
                   <div className="gnv-img-divider" />
-                  <img src={store.images[1]} alt={store.name} />
+                  <img src={store.images[1]} alt={store.name} loading="lazy"/>
                   {store.badge && (
                     <div className="gnv-card-badge">{store.badge}</div>
                   )}

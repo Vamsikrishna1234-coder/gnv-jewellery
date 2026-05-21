@@ -5,10 +5,10 @@ import img1 from "../assets/images/coins bg.png";
 const coinsProducts = [
 
   /* ================= GOLD COINS ================= */
-  { id: "gold-coin-101", category: "gold-coins", name: "Gold Coin 1g", weight: "1", price: 6500, image: img1, purity: "24KT", makingCharges: "5%", description: "1g gold coin.", images: [img1,img1,img1]},
-  { id: "gold-coin-102", category: "gold-coins", name: "Gold Coin 2g", weight: "2", price: 13000, image: img1, purity: "24KT", makingCharges: "5%", description: "2g gold coin.", images: [img1,img1,img1]},
-  { id: "gold-coin-103", category: "gold-coins", name: "Gold Coin 5g", weight: "5", price: 32000, image: img1, purity: "24KT", makingCharges: "5%", description: "5g gold coin.", images: [img1,img1,img1]},
-  { id: "gold-coin-104", category: "gold-coins", name: "Gold Coin 10g", weight: "10", price: 64000, image: img1, purity: "24KT", makingCharges: "5%", description: "10g gold coin.", images: [img1,img1,img1]},
+  { id: "gold-coin-101", category: "gold-coins", name: "Gold Coin 10g", weight: "1", price: 6500, image: img1, purity: "24KT", makingCharges: "5%", description: "1g gold coin.", images: [img1,img1,img1]},
+  { id: "gold-coin-102", category: "gold-coins", name: "Gold Coin 20g", weight: "2", price: 13000, image: img1, purity: "24KT", makingCharges: "5%", description: "2g gold coin.", images: [img1,img1,img1]},
+  { id: "gold-coin-103", category: "gold-coins", name: "Gold Coin 30g", weight: "5", price: 32000, image: img1, purity: "24KT", makingCharges: "5%", description: "5g gold coin.", images: [img1,img1,img1]},
+  { id: "gold-coin-104", category: "gold-coins", name: "", weight: "10", price: 64000, image: img1, purity: "24KT", makingCharges: "5%", description: "10g gold coin.", images: [img1,img1,img1]},
   { id: "gold-coin-105", category: "gold-coins", name: "Lakshmi Gold Coin", weight: "8", price: 52000, image: img1, purity: "24KT", makingCharges: "6%", description: "Lakshmi coin.", images: [img1,img1,img1]},
   { id: "gold-coin-106", category: "gold-coins", name: "Ganesha Gold Coin", weight: "8", price: 53000, image: img1, purity: "24KT", makingCharges: "6%", description: "Ganesha coin.", images: [img1,img1,img1]},
 
