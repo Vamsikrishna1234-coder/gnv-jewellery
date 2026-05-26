@@ -3,7 +3,7 @@
 import React, { useState, useEffect } from "react";
 import ProductCard from "../components/Cards/ProductCard";
 import goldProducts from "../data/goldProducts";
-import bg1 from "../assets/images/gold bg1.png";
+import bg1 from "../assets/images/ringwood.png";
 
 const Gold = () => {
 

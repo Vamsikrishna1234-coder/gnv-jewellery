@@ -1,8 +1,6 @@
-
-// src/pages/About.jsx
-
+// src/pages/About.js
 import React from "react";
-import banner from "../assets/images/highbanner-gnv.jpeg";
+import banner from "../assets/images/highbanner1.png";
 import FounderSection from "../components/Founder";
 
 const About = () => {
@@ -32,7 +30,7 @@ const About = () => {
         />
 
         {/* OVERLAY */}
-        <div className="absolute inset-0 bg-black/40"></div>
+        <div className="absolute inset-0 bg-black/0"></div>
 
         {/* TEXT */}
         <div
@@ -52,39 +50,7 @@ const About = () => {
           "
         >
 
-          <h1
-            className="
-              font-bold
-              text-[#c28b00]
-
-              text-[32px]
-              sm:text-[42px]
-              md:text-5xl
-
-              leading-tight
-            "
-          >
-            About GNV Jewellers
-          </h1>
-
-          <p
-            className="
-              text-gray-200
-
-              mt-4
-
-              max-w-2xl
-
-              text-[14px]
-              sm:text-[16px]
-              md:text-lg
-
-              leading-relaxed
-            "
-          >
-            Crafting timeless jewellery with trust,
-            tradition, and elegance.
-          </p>
+          
 
         </div>
 
@@ -104,20 +70,20 @@ const About = () => {
           md:py-16
         "
       >
+       <h1
+            className="
+              font-bold
+              text-[#c28b00]
 
-        {/* TITLE */}
-        <h2
-          className="
-            font-bold
-            text-[#c28b00]
-
-            text-[32px]
-            sm:text-[38px]
-            md:text-4xl
-          "
-        >
-          Our Story
-        </h2>
+              text-[32px]
+              sm:text-[42px]
+              md:text-5xl
+              align-center
+              leading-tight
+            "
+          >
+            About GNV Jewellers
+          </h1>
 
         {/* PARAGRAPH 1 */}
         <p

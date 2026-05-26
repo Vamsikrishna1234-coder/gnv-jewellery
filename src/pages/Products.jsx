@@ -10,7 +10,7 @@ import diamondImg from "../assets/images/diamondred.jpeg";
 import bridalImg from "../assets/images/bridalred.png";
 import coinImg from "../assets/images/coinsred.png";
 
-import img1 from "../assets/images/allprod.jpg"
+import img1 from "../assets/images/silver/sr1.png"
 
 const Products = () => {
 

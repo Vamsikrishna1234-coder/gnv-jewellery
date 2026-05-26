@@ -3,7 +3,7 @@
 import React, { useState, useEffect } from "react";
 import ProductCard from "../components/Cards/ProductCard";
 import diamondProducts from "../data/diamondProducts";
-import bg1 from "../assets/images/dmnd bg.png";
+import bg1 from "../assets/images/diambox.png";
 
 const Diamond = () => {
 

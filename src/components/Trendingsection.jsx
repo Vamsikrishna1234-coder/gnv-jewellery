@@ -1,14 +1,14 @@
 import { useState } from "react";
-import img1 from "../assets/images/b1.jpg";
-import img2 from "../assets/images/d1.jpg";
-import img3 from "../assets/images/d2.jpg";
-import img4 from "../assets/images/s1.jpg";
+import img1 from "../assets/images/trend1.jpeg";
+import img2 from "../assets/images/trend2.png";
+import img3 from "../assets/images/trend3.png";
+import img4 from "../assets/images/trend4.png";
 import { useNavigate } from "react-router-dom";
 
 const collections = [
   {
     id: "gold",
-    badge: "18KT GOLD",
+    badge: "22KT GOLD BANGLES",
     route: "/gold",
     image: img1,
   },
@@ -22,7 +22,7 @@ const collections = [
 
   {
     id: "diamond-pendants",
-    badge: "DIAMOND-PENDANTS",
+    badge: "DIAMOND-NECKLACES",
     route: "/diamond",
     image: img3,
   },

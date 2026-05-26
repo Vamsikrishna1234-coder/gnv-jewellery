@@ -3,8 +3,8 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
 
-import img1 from "../assets/images/d1.jpg";
-import img2 from "../assets/images/d2.jpg";
+import img2 from "../assets/images/ringwood.png";
+import img1 from "../assets/images/rgoldneck.png";
 
 const LuxuryDualBanner = () => {
 
@@ -226,7 +226,7 @@ const LuxuryDualBanner = () => {
               md:mb-4
             "
           >
-            DIAMOND COLLECTION
+             GOLD COLLECTION
           </p>
 
           {/* MAIN TITLE */}
@@ -261,13 +261,13 @@ const LuxuryDualBanner = () => {
               leading-relaxed
             "
           >
-            Elegant diamond pieces designed to enhance your
+            Elegant Gold pieces designed to enhance your
             everyday style and celebrate life’s finest occasions.
           </p>
 
           {/* BUTTON */}
           <button
-            onClick={() => navigate("/diamond")}
+            onClick={() => navigate("/gold")}
             className="
               border
               border-[#c28b00]

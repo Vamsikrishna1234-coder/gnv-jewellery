@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import img1 from "../assets/images/contact-gnv.jpg";
+import img1 from "../assets/images/contact-gnv.png";
 
 const ContactSection = () => {
 

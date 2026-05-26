@@ -1,7 +1,7 @@
 // src/components/Sections/JewelsOccasionSection.jsx
 
 import React from "react";
-import bg from "../assets/images/highbanner-gnv.jpeg";
+import bg from "../assets/images/highbanner.png";
 
 const JewelsOccasionSection = () => {
 

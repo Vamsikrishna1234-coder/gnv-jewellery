@@ -3,9 +3,9 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
 
-import img1 from "../assets/images/d1.jpg";
-import img2 from "../assets/images/d1.jpg";
-import img3 from "../assets/images/d2.jpg";
+import img1 from "../assets/images/diambox.png";
+import img2 from "../assets/images/gold/r5.jpeg";
+import img3 from "../assets/images/diamjew1.png";
 
 const FeaturedCollections = () => {
 
@@ -88,7 +88,7 @@ const FeaturedCollections = () => {
 
         {/* ================= LEFT BIG CARD ================= */}
         <div
-          onClick={() => navigate("/gold")}
+          onClick={() => navigate("/diamond")}
           className="
             relative
             rounded-2xl
@@ -192,7 +192,7 @@ const FeaturedCollections = () => {
 
           {/* ================= TOP CARD ================= */}
           <div
-            onClick={() => navigate("/diamond")}
+            onClick={() => navigate("/gold")}
             className="
               relative
               rounded-2xl

@@ -3,9 +3,13 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
 
-import bannerImg from "../assets/images/d1.jpg";
-import img1 from "../assets/images/d1.jpg";
-import img2 from "../assets/images/d2.jpg";
+import bannerImg from "../assets/images/trend2.png";
+import chains from "../assets/images/gold/goldchain.png";
+import rings from "../assets/images/gold/r3.jpeg";
+import bangles from "../assets/images/gold/b3.jpeg"
+import necklaces from "../assets/images/gold/classicneck.jpeg"
+import bracelets from "../assets/images/silver/sb2.png"
+import bridal from "../assets/images/bridal bg1.jpg";
 
 /* COLLECTION PILLS */
 const collections = [
@@ -13,7 +17,7 @@ const collections = [
     id: 1,
     title: "Chains",
     desc: "Classic and timeless chains for every occasion.",
-    icon: img1,
+    icon: chains,
     category: "chains",
   },
 
@@ -21,7 +25,7 @@ const collections = [
     id: 2,
     title: "Rings",
     desc: "Elegant gold rings crafted to symbolize beauty.",
-    icon: img2,
+    icon: rings,
     category: "rings",
   },
 
@@ -29,7 +33,7 @@ const collections = [
     id: 3,
     title: "Bangles",
     desc: "Elegant bangles for a timeless look.",
-    icon: img1,
+    icon: bangles,
     category: "bangles",
   },
 
@@ -37,7 +41,7 @@ const collections = [
     id: 4,
     title: "Necklaces",
     desc: "Beautiful necklaces that add charm.",
-    icon: img2,
+    icon: necklaces,
     category: "necklace",
   },
 
@@ -45,7 +49,7 @@ const collections = [
     id: 5,
     title: "Bracelets",
     desc: "Exquisite bracelet collections.",
-    icon: img1,
+    icon: bracelets,
     category: "bracelets",
   },
 
@@ -53,7 +57,7 @@ const collections = [
     id: 6,
     title: "Bridal",
     desc: "Exclusive bridal jewellery for grand occasions.",
-    icon: img2,
+    icon: bridal,
     category: "bridal",
   },
 ];
@@ -63,35 +67,35 @@ const products = [
   {
     id: 1,
     name: "Chains",
-    image: img1,
+    image: chains,
     category: "chains",
   },
 
   {
     id: 2,
     name: "Rings",
-    image: img2,
+    image: rings,
     category: "rings",
   },
 
   {
     id: 3,
     name: "Bangles",
-    image: img1,
+    image: bangles,
     category: "bangles",
   },
 
   {
     id: 4,
     name: "Necklaces",
-    image: img2,
+    image: necklaces,
     category: "necklace",
   },
 
   {
     id: 5,
     name: "Bracelets",
-    image: img1,
+    image: bracelets,
     category: "bracelets",
   },
 ];
@@ -169,11 +173,15 @@ const OurCollections = () => {
 
             <div
               key={item.id}
-              onClick={() =>
-                item.category === "bridal"
-                  ? navigate("/bridal")
-                  : navigate(`/gold/${item.category}`)
-              }
+              onClick={() => {
+                if (item.category === "bracelets") {
+                  navigate("/silver/bracelets");
+                } else if (item.category === "bridal") {
+                  navigate("/bridal");
+                } else {
+                  navigate(`/gold/${item.category}`);
+                }
+              }}
               className="
                 flex
                 items-center
@@ -229,8 +237,8 @@ const OurCollections = () => {
                   className="
                     w-10
                     h-10
-                    sm:w-11
-                    sm:h-11
+                    sm:w-12
+                    sm:h-12
                     object-cover
                     rounded-full
                   "
@@ -409,11 +417,15 @@ const OurCollections = () => {
 
               <div
                 key={item.id}
-                onClick={() =>
-                  item.category === "bridal"
-                    ? navigate("/bridal")
-                    : navigate(`/gold/${item.category}`)
-                }
+                onClick={() => {
+                  if (item.category === "bracelets") {
+                    navigate("/silver/bracelets");
+                  } else if (item.category === "bridal") {
+                    navigate("/bridal");
+                  } else {
+                    navigate(`/gold/${item.category}`);
+                  }
+                }}
                 className="
                   bg-white
 
