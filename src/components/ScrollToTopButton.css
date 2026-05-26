@@ -48,7 +48,7 @@
 /* Responsive design */
 @media (max-width: 768px) {
   .scroll-to-top {
-    bottom: 20px;
+    bottom: 100px;
     right: 20px;
   }
 
